@@ -58,29 +58,6 @@ impl Sandbox for SpreadsheetApp {
         }
     }
 
-    // fn view(&self) -> Element<Message> {
-    //     let displayed_value = match self.sheet.get_cell(0, 0) {
-    //         Some(cell) => match &cell.value {
-    //             CellValue::Text(text) => text.clone(),
-    //             CellValue::Number(num) => num.to_string(),
-    //             CellValue::Formula(expr) => format!("Formula: {}", expr),
-    //             CellValue::Empty => String::from("(empty)"),
-    //         },
-    //         None => String::from("(no cell)"),
-    //     };
-
-    //     Column::new()
-    //         .push(Text::new("Enter cell value (A1):"))
-    //         .push(
-    //             TextInput::new("Type here...", &self.input)
-    //                 .on_input(Message::InputChanged)
-    //                 .padding(10)
-    //                 .size(20),
-    //         )
-    //         .push(Text::new(format!("Cell A1 value: {}", displayed_value)))
-    //         .into()
-    // }
-
     fn view(&self) -> Element<Message> {
         let mut grid = Column::new().spacing(5);
 
